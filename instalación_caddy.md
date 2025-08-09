@@ -14,3 +14,11 @@ https://dl.cloudsmith.io/public/caddy/stable/deb/ubuntu $(lsb_release -cs) main"
   | sudo tee /etc/apt/sources.list.d/caddy-stable.list
 
 ```
+
+
+### `2. Actualizar e Instalar`
+
+```bash
+sudo apt update
+sudo apt install -y caddy
+```
