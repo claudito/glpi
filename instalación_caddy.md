@@ -22,3 +22,28 @@ https://dl.cloudsmith.io/public/caddy/stable/deb/ubuntu $(lsb_release -cs) main"
 sudo apt update
 sudo apt install -y caddy
 ```
+
+
+### `3. Activar y arrancar Caddy`
+
+```bash
+sudo systemctl enable caddy
+sudo systemctl start caddy
+```
+
+### `3. Configurar Dominio`
+
+```bash
+#Editar Archivo:
+sudo nano /etc/caddy/Caddyfile
+```
+```bash
+#Agregar Configuración al archivo
+dirislimaeste.xyz {
+    reverse_proxy 127.0.0.1:8080
+}
+```
+
+
+
+
