@@ -23,7 +23,6 @@ sudo apt update
 sudo apt install -y caddy
 ```
 
-
 ### `3. Activar y arrancar Caddy`
 
 ```bash
@@ -31,7 +30,7 @@ sudo systemctl enable caddy
 sudo systemctl start caddy
 ```
 
-### `3. Configurar Dominio`
+### `4. Configurar Dominio`
 
 ```bash
 #Editar Archivo:
@@ -44,6 +43,17 @@ dirislimaeste.xyz {
 }
 ```
 
+### `5.  Abrir puertos en el firewall`
 
+```bash
+sudo ufw allow 80,443/tcp
+```
+
+
+### `6. Reiniciar Caddy`
+
+```bash
+sudo systemctl restart caddy
+```
 
 
