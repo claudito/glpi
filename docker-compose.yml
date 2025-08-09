@@ -1,0 +1,29 @@
+services:
+  glpi:
+    image: diouxx/glpi:latest
+    container_name: glpi
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - glpi_data:/var/www/html/glpi
+    environment:
+      - TZ=America/Lima
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:10.11
+    container_name: glpi_db
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=bD6K0wd1kbij
+      - MYSQL_DATABASE=glpi
+      - MYSQL_USER=glpi
+      - MYSQL_PASSWORD=bD6K0wd1kbij
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  glpi_data:
+  db_data:
