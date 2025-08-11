@@ -3,8 +3,6 @@ services:
     image: diouxx/glpi:latest
     container_name: glpi
     restart: unless-stopped
-    ports:
-      - "8080:80"
     volumes:
       - glpi_data:/var/www/html/glpi
     environment:
