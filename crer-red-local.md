@@ -23,5 +23,5 @@ docker ps
 
 ```bash
 #Añadir Container NPM
- docker network connect red-web <ID_CONTAINER_GLPI>
+ docker network connect red-web <ID_CONTAINER_NPM>
 ```
